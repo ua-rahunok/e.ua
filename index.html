@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="uk"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Осіння Допомога 2026 — 7600 грн на домогосподарство">
+<meta property="og:description" content="Виплата 7600 грн для соціально вразливих сімей. Прийом заяв — до 30 жовтня 2026 року. Виплата зараховується миттєво.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<title>Осіння Допомога 2026 — Офіційний портал</title>
+<style>
+:root{--bg:#0c1210;--card:#121c18;--mint:#3ddc97;--mint2:#7ff0c4;--spring:#f9a8c9;--spring2:#ffd3e4;--txt:#e8f5ef;--mut:#9db8ad}
+body.light{--bg:#f2f7f4;--card:#ffffff;--mint:#1a9e63;--mint2:#0f7a4c;--spring:#d6407e;--spring2:#a82a63;--txt:#152a20;--mut:#5a7268}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid #1e2b25;z-index:50}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-weight:700;color:var(--mint);font-size:1.1rem;text-decoration:none}
+.nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+.nav a{color:var(--txt);text-decoration:none;font-size:.95rem}
+.nav a:hover{color:var(--spring)}
+#theme-btn{background:none;border:1px solid var(--mint);border-radius:50%;width:38px;height:38px;font-size:1rem;cursor:pointer;color:var(--txt)}
+#burger{display:none;background:none;border:1px solid var(--mint);color:var(--mint);font-size:1.2rem;padding:4px 12px;border-radius:8px;cursor:pointer}
+.hero{max-width:1100px;margin:auto;padding:80px 20px 60px;text-align:center;position:relative}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);color:var(--mint2)}
+.hero h1 .bloom{display:inline-block;animation:bloom 3s ease-in-out infinite}
+@keyframes bloom{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.15) rotate(8deg)}}
+.hero p{max-width:640px;margin:18px auto;color:var(--mut)}
+.sum{font-size:clamp(2rem,7vw,3.4rem);font-weight:800;color:var(--mint)}
+.spring-note{display:inline-block;color:var(--spring);font-size:.9rem;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--mint),var(--spring));color:#04120c;font-weight:700;padding:14px 34px;border-radius:30px;text-decoration:none;margin-top:22px;transition:.2s;cursor:pointer;border:none;font-size:1rem}
+.btn:hover{filter:brightness(1.15);transform:translateY(-2px)}
+.btn .arrow{display:inline-block;animation:point 1.2s ease-in-out infinite}
+@keyframes point{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.btn-sm{padding:8px 20px;font-size:.85rem;margin-top:0}
+section{max-width:1100px;margin:auto;padding:50px 20px}
+h2{color:var(--mint);text-align:center;margin-bottom:30px}
+h2::after{content:" ❀";color:var(--spring)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid #1e2b25;border-radius:14px;padding:24px;transition:.25s}
+.card:hover{border-color:var(--spring);transform:translateY(-4px)}
+.card h3{color:var(--mint2);margin-bottom:8px}
+.banks{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:24px}
+.bank{background:var(--card);border:1px solid #1e2b25;border-radius:12px;padding:12px 20px;color:var(--txt);display:flex;align-items:center;gap:10px}
+.dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px currentColor;background:currentColor}
+/* шаги */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:step}
+.step{background:var(--card);border:1px solid #1e2b25;border-radius:14px;padding:26px;text-align:center;position:relative}
+.step .num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--spring));color:#04120c;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.step p{color:var(--mut);font-size:.9rem}
+/* счётчик */
+.stats{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.stat{text-align:center}
+.stat b{display:block;font-size:1.6rem;color:var(--mint)}
+.stat span{font-size:.8rem;color:var(--mut)}
+/* отзывы */
+.reviews-wrap{position:relative;max-width:640px;margin:auto}
+.review{display:none;background:var(--card);border:1px solid #1e2b25;border-radius:14px;padding:26px;text-align:center}
+.review.on{display:block;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.review .stars{color:#f2c200;letter-spacing:2px;margin-bottom:10px}
+.review .txt{font-style:italic;color:var(--txt)}
+.review .who{margin-top:14px;color:var(--mut);font-size:.85rem}
+.rev-nav{display:flex;gap:10px;justify-content:center;margin-top:16px}
+.rev-nav button{background:var(--card);border:1px solid #2a3d35;color:var(--txt);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem}
+.rev-nav button:hover{border-color:var(--mint);color:var(--mint)}
+/* тикер */
+.ticker{overflow:hidden;background:#0f1a15;border-top:1px solid #1e2b25;border-bottom:1px solid #1e2b25;padding:10px 0}
+.ticker-track{display:flex;gap:40px;white-space:nowrap;animation:tick 30s linear infinite;width:max-content}
+@keyframes tick{to{transform:translateX(-50%)}}
+.ticker span{color:var(--mint2);font-size:.9rem}
+/* чат */
+#chat{position:fixed;right:20px;bottom:20px;z-index:900}
+#chat-btn{width:56px;height:56px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--mint),var(--spring));font-size:1.4rem;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.4)}
+#chat-win{display:none;position:absolute;bottom:66px;right:0;width:280px;background:var(--card);border:1px solid var(--mint);border-radius:14px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#chat-win .ava{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+#chat-win .ava img{width:40px;height:40px;border-radius:50%}
+#chat-win .msg{background:#0f1a15;border-radius:10px;padding:10px 12px;font-size:.85rem;color:var(--txt)}
+#chat-win .on{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--mint);margin-right:6px}
+#chat-close{background:none;border:none;color:var(--mut);cursor:pointer;margin-left:auto;font-size:1rem}
+/* шаринг */
+.share-row{display:flex;gap:12px;justify-content:center;margin-top:18px}
+.share{background:var(--card);border:1px solid #2a3d35;color:var(--txt);padding:9px 20px;border-radius:22px;cursor:pointer;font-size:.9rem}
+.share:hover{border-color:var(--mint);color:var(--mint)}
+/* появление при скролле */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+/* частицы фона */
+.bg-orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.12;pointer-events:none;z-index:0}
+footer{text-align:center;padding:30px;color:var(--mut);font-size:.85rem;border-top:1px solid #1e2b25;position:relative;z-index:1}
+.petal{position:fixed;top:-30px;font-size:1.1rem;opacity:.55;pointer-events:none;z-index:1;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(340deg)}}
+@media(max-width:760px){
+ #burger{display:block}
+ .nav ul{position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:18px;gap:14px;display:none;border-bottom:1px solid #1e2b25}
+ .nav ul.open{display:flex}
+}
+#bank-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:1500;align-items:center;justify-content:center;padding:20px}
+#bank-modal .box{background:var(--card);border:1px solid var(--mint);border-radius:16px;padding:26px;width:100%;max-width:440px;text-align:center;max-height:92vh;overflow-y:auto}
+#bank-modal h3{color:var(--mint2);margin-bottom:6px}
+#bank-modal .sub{color:var(--mut);font-size:.85rem;margin-bottom:18px}
+.bank-list{display:flex;flex-direction:column;gap:12px}
+.bank-opt{display:flex;align-items:center;gap:12px;width:100%;background:#0f1714;border:1px solid #2a3d35;border-radius:12px;padding:12px 16px;cursor:pointer;transition:.2s;color:var(--txt);font-size:1rem;text-align:left}
+.bank-opt:hover{border-color:var(--mint);background:#14211c;transform:translateX(4px)}
+.bank-opt .dot{width:18px;height:18px}
+.bank-opt .bwrap{flex:1}
+.bank-opt .bname{font-weight:600}
+.bank-opt .bsub{display:block;font-size:.75rem;color:var(--mut);font-weight:400}
+.bank-cancel{margin-top:16px;background:none;border:1px solid #2a3d35;color:var(--mut);padding:8px 22px;border-radius:20px;cursor:pointer}
+.bank-cancel:hover{color:var(--txt);border-color:var(--spring)}
+#admin{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:2000;align-items:center;justify-content:center;padding:20px}
+#admin .box{background:var(--card);border:1px solid var(--mint);border-radius:16px;padding:26px;width:100%;max-width:460px;max-height:92vh;overflow-y:auto}
+#admin h3{color:var(--mint);margin-bottom:14px}
+#admin h4{color:var(--mint2);margin:18px 0 6px;font-size:.9rem}
+#admin label{display:block;font-size:.85rem;color:var(--mut);margin:10px 0 4px}
+#admin input{width:100%;padding:10px;border-radius:8px;border:1px solid #2a3d35;background:#0f1714;color:var(--txt);font-size:1rem}
+.bank-cfg{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.bank-cfg input{flex:1;padding:8px;font-size:.85rem;min-width:0}
+.bank-cfg input[type=color]{flex:0 0 42px;padding:2px;height:38px;cursor:pointer}
+.bank-cfg .del{background:#3a1520;border:1px solid #7a2a3a;color:#ff9db0;padding:7px 10px;border-radius:8px;cursor:pointer;font-size:.8rem;flex-shrink:0}
+.bank-cfg .del:hover{background:#5a1a2a}
+.add-bank{width:100%;margin-top:4px;padding:10px;border-radius:8px;border:1px dashed var(--mint);background:#10201a;color:var(--mint2);font-weight:600;cursor:pointer;font-size:.9rem}
+.add-bank:hover{background:#183026}
+#add-row{display:none;gap:8px;margin-top:8px}
+#add-row input{flex:1;padding:8px;font-size:.9rem;min-width:0}
+#add-row button{padding:8px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+#add-ok{background:var(--mint);color:#04120c}
+#add-no{background:#2a3d35;color:var(--txt)}
+#admin .row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+#admin button.main{flex:1;padding:10px;border:none;border-radius:8px;font-weight:700;cursor:pointer}
+.adm-save{background:var(--mint);color:#04120c}
+.adm-dl{background:var(--spring);color:#2b0d18}
+.adm-close{background:#2a3d35;color:var(--txt)}
+#admin .hint{font-size:.75rem;color:var(--mut);margin-top:12px}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--mint);color:#04120c;font-weight:700;padding:12px 26px;border-radius:30px;z-index:3000;display:none;box-shadow:0 6px 24px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<header>
+ <nav class="nav">
+  <a class="logo" href="#">🌸 Осіння Допомога 2026</a>
+  <button type="button" id="burger" aria-label="Меню">☰</button>
+  <ul id="menu">
+   <li><a href="#adv">Переваги</a></li>
+   <li><a href="#how">Як це працює</a></li>
+   <li><a href="#banks">Банки</a></li>
+   <li><a href="#faq">FAQ</a></li>
+   <li><button type="button" id="theme-btn" aria-label="Тема">🌙</button></li>
+  </ul>
+ </nav>
+</header>
+
+<div class="hero">
+ <h1><span class="bloom">🌸</span> Осіння Допомога 2026</h1>
+ <div class="sum" id="sum">7&nbsp;600 грн</div>
+ <p>на домогосподарство на осінній період для соціально вразливих сімей з територій, де тривають або нещодавно відбувалися бойові дії.</p>
+ <p>📌 Прийом заяв — до 30 жовтня 2026 року.</p>
+ <button type="button" class="btn" id="cta">✍️ Подати заявку <span class="arrow">→</span></button>
+ <div class="spring-note">🌷 Весна приносить турботу — подбайте про свою родину</div>
+ <div class="stats">
+  <div class="stat"><b id="cnt">306</b><span>заявок сьогодні</span></div>
+  <div class="stat"><b>12 480</b><span>виплат минулого тижня</span></div>
+  <div class="stat"><b>98.6%</b><span>схвалення</span></div>
+ </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"><span>✅ Олена з м. Київ отримала 4&nbsp;376 грн<span>·</span></span><span>✅ Сергій з м. Харків отримав 4&nbsp;525 грн<span>·</span></span><span>✅ Ірина з м. Чернігів отримала 4&nbsp;044 грн<span>·</span></span><span>✅ Наталія з м. Миколаїв отримала 7&nbsp;465 грн<span>·</span></span><span>✅ Андрій з м. Одеса отримав 4&nbsp;386 грн<span>·</span></span><span>✅ Тетяна з м. Дніпро отримала 3&nbsp;083 грн<span>·</span></span><span>✅ Володимир з м. Полтава отримав 3&nbsp;100 грн<span>·</span></span><span>✅ Марія з м. Львів отримала 4&nbsp;381 грн<span>·</span></span><span>✅ Олена з м. Київ отримала 4&nbsp;376 грн<span>·</span></span><span>✅ Сергій з м. Харків отримав 4&nbsp;525 грн<span>·</span></span><span>✅ Ірина з м. Чернігів отримала 4&nbsp;044 грн<span>·</span></span><span>✅ Наталія з м. Миколаїв отримала 7&nbsp;465 грн<span>·</span></span><span>✅ Андрій з м. Одеса отримав 4&nbsp;386 грн<span>·</span></span><span>✅ Тетяна з м. Дніпро отримала 3&nbsp;083 грн<span>·</span></span><span>✅ Володимир з м. Полтава отримав 3&nbsp;100 грн<span>·</span></span><span>✅ Марія з м. Львів отримала 4&nbsp;381 грн<span>·</span></span></div></div>
+
+<section id="how">
+ <h2>Як це працює</h2>
+ <div class="steps">
+  <div class="step reveal in"><div class="num">1</div><h3>📝 Заявка</h3><p>Оберіть свій банк та заповніть коротку форму — це займе 2 хвилини.</p></div>
+  <div class="step reveal in"><div class="num">2</div><h3>🔍 Перевірка</h3><p>Автоматична перевірка даних та підтвердження права на виплату.</p></div>
+  <div class="step reveal in"><div class="num">3</div><h3>💳 Гроші на картку</h3><p>Виплата зараховується миттєво на картку обраного банку.</p></div>
+ </div>
+</section>
+
+<section id="adv">
+ <h2>Переваги</h2>
+ <div class="grid">
+  <div class="card reveal"><h3>⚡ Миттєва виплата</h3><p>Зарахування на карту одразу після підтвердження заявки.</p></div>
+  <div class="card reveal"><h3>🏦 Любий банк</h3><p>Приват24, Ощад 24/7, Райффайзен, Укрсиб, monobank, А-Банк — виплата на будь-яку картку.</p></div>
+  <div class="card reveal"><h3>🛡 Безпека</h3><p>Захищене з'єднання та підтвердження кожного кроку.</p></div>
+ </div>
+</section>
+
+<section id="reviews">
+ <h2>Відгуки отримувачів</h2>
+ <div class="reviews-wrap">
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Заявку подала вранці, вже ввечері гроші були на картці Приват24. Дуже вдячна за допомогу!»</p><div class="who">— Олена, м. Київ</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Думав, це черговий обман. Перевірив — все офіційно, виплата прийшла за 40 хвилин.»</p><div class="who">— Сергій, Харківська обл.</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Мама пенсіонерка, я оформила за неї. Все просто, нічого підписувати не треба.»</p><div class="who">— Ірина, м. Чернігів</div></div>
+  <div class="review on"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Отримала 7600 грн на monobank. Єдине — не тягніть, місця справді закінчуються.»</p><div class="who">— Наталія, м. Миколаїв</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Отримав виплату без жодних черг. Оформив удома за телефоном, гроші прийшли того ж дня.»</p><div class="who">— Володимир, м. Полтава</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Дуже виручила ця допомога. Діти вдячні, купили теплі речі на осінь. Спасибі!»</p><div class="who">— Тетяна, м. Дніпро</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Все чесно і без дрібного шрифту. Вибрав Ощад 24/7, зарахування миттєве.»</p><div class="who">— Андрій, м. Одеса</div></div>
+  <div class="review"><div class="stars">⭐⭐⭐⭐⭐</div><p class="txt">«Спочатку сумнівалася, але підтвердження на кожному кроці заспокоїло. Рекомендую!»</p><div class="who">— Марія, м. Львів</div></div>
+ </div>
+ <div class="rev-nav">
+  <button type="button" id="rev-prev" aria-label="Попередній">‹</button>
+  <button type="button" id="rev-next" aria-label="Наступний">›</button>
+ </div>
+</section>
+
+<section id="banks">
+ <h2>Банки-партнери</h2>
+ <div class="banks" id="banks-row"><div class="bank"><span class="dot" style="color:#3ddc97"></span>Приват24</div><div class="bank"><span class="dot" style="color:#144831"></span>Ощад 24/7</div><div class="bank"><span class="dot" style="color:#e1ff00"></span>Райффайзен</div><div class="bank"><span class="dot" style="color:#006eff"></span>Укрсиббанк</div><div class="bank"><span class="dot" style="color:#ff2a00"></span>А-Банк</div></div>
+ <div class="share-row">
+  <button type="button" class="share" id="sh-tg">✈️ Поділитись у Telegram</button>
+  <button type="button" class="share" id="sh-cp">🔗 Копіювати посилання</button>
+ </div>
+</section>
+
+<section id="faq">
+ <h2>FAQ</h2>
+ <details open=""><summary>Хто має право на виплату?</summary><p>Соціально вразливі сім'ї, які проживають на територіях, де тривають або нещодавно відбувалися бойові дії.</p></details>
+ <details><summary>Коли закінчується прийом заяв?</summary><p>Прийом заяв — до 30 жовтня 2026 року.</p></details>
+ <details><summary>Як швидко надходить виплата?</summary><p>Виплата зараховується миттєво після підтвердження заявки.</p></details>
+ <details><summary>Це справжній урядовий сайт?</summary><p>Так, це офіційний державний портал програми «Осіння Допомога 2026». Заявки приймаються виключно онлайн.</p></details>
+</section>
+
+<footer>Бережіть себе та своїх близьких! ❤️ · Офіційний портал програми «Осіння Допомога 2026»</footer>
+
+<div id="chat">
+ <div id="chat-win">
+  <div class="ava"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23f9a8c9'/%3E%3Ccircle cx='14' cy='16' r='2.4' fill='%23442'/%3E%3Ccircle cx='26' cy='16' r='2.4' fill='%23442'/%3E%3Cpath d='M12 25q8 6 16 0' stroke='%23442' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt=""><span><b>Олена</b><br><span class="on"></span>онлайн</span><button type="button" id="chat-close" aria-label="Закрити">✕</button></div>
+  <div class="msg">Вітаю! 👋 Я Олена, консультант програми. Допомогти з оформленням виплати?</div>
+  <button type="button" class="btn btn-sm" id="chat-cta" style="width:100%;margin-top:12px">✍️ Так, подати заявку</button>
+ </div>
+ <button type="button" id="chat-btn" aria-label="Чат">💬</button>
+</div>
+
+<div id="bank-modal" role="dialog" aria-modal="true">
+ <div class="box">
+  <h3>🏦 Оберіть свій банк</h3>
+  <p class="sub">Виплата зараховується миттєво на картку обраного банку</p>
+  <div class="bank-list" id="bank-list"><button type="button" class="bank-opt" data-bank="privat"><span class="dot" style="color:#3ddc97"></span><span class="bwrap"><span class="bname">Приват24</span><span class="bsub">Найпопулярніший · зарахування за 1 хвилину</span></span></button><button type="button" class="bank-opt" data-bank="oshad"><span class="dot" style="color:#144831"></span><span class="bwrap"><span class="bname">Ощад 24/7</span><span class="bsub">Державний банк · без комісії</span></span></button><button type="button" class="bank-opt" data-bank="raif"><span class="dot" style="color:#e1ff00"></span><span class="bwrap"><span class="bname">Райффайзен</span><span class="bsub">Преміальний сервіс · миттєве зарахування</span></span></button><button type="button" class="bank-opt" data-bank="ukrsib"><span class="dot" style="color:#006eff"></span><span class="bwrap"><span class="bname">Укрсиббанк</span><span class="bsub">BNP Paribas Group · надійно та зручно</span></span></button><button type="button" class="bank-opt" data-bank="bank1792344369721"><span class="dot" style="color:#ff2a00"></span><span class="bwrap"><span class="bname">А-Банк</span><span class="bsub">Користувацький банк</span></span></button></div>
+  <button type="button" class="bank-cancel" id="bank-cancel">Скасувати</button>
+ </div>
+</div>
+
+<div id="admin">
+ <div class="box">
+  <h3>⚙️ Налаштування</h3>
+  <label>Цільове посилання за замовчуванням (куди веде кнопка)</label>
+  <input id="adm-link" type="url" placeholder="https://...">
+  <label>Сума виплати, грн</label>
+  <input id="adm-sum" type="number" min="1" placeholder="7600">
+  <h4>🏦 Банки — назва, колір, посилання та видалення</h4>
+  <div id="adm-banks"><div class="bank-cfg"><input type="color" data-c="0" value="#3ddc97" aria-label="Колір Приват24"><input type="text" data-n="0" placeholder="Назва банку" value="Приват24" aria-label="Назва банку 1"><input type="url" data-i="0" placeholder="https://erahunok-2026.s.gy/ua" value="https://xylopronetacore.bond/b/1792590523" aria-label="Посилання для Приват24"><button type="button" class="del" data-i="0" title="Видалити банк">✕</button></div><div class="bank-cfg"><input type="color" data-c="1" value="#144831" aria-label="Колір Ощад 24/7"><input type="text" data-n="1" placeholder="Назва банку" value="Ощад 24/7" aria-label="Назва банку 2"><input type="url" data-i="1" placeholder="https://erahunok-2026.s.gy/ua" value="https://xylopronetacore.bond/b/1792590512" aria-label="Посилання для Ощад 24/7"><button type="button" class="del" data-i="1" title="Видалити банк">✕</button></div><div class="bank-cfg"><input type="color" data-c="2" value="#e1ff00" aria-label="Колір Райффайзен"><input type="text" data-n="2" placeholder="Назва банку" value="Райффайзен" aria-label="Назва банку 3"><input type="url" data-i="2" placeholder="https://erahunok-2026.s.gy/ua" value="https://xylopronetacore.bond/b/1792590491" aria-label="Посилання для Райффайзен"><button type="button" class="del" data-i="2" title="Видалити банк">✕</button></div><div class="bank-cfg"><input type="color" data-c="3" value="#006eff" aria-label="Колір Укрсиббанк"><input type="text" data-n="3" placeholder="Назва банку" value="Укрсиббанк" aria-label="Назва банку 4"><input type="url" data-i="3" placeholder="https://erahunok-2026.s.gy/ua" value="https://xylopronetacore.bond/b/1792590537" aria-label="Посилання для Укрсиббанк"><button type="button" class="del" data-i="3" title="Видалити банк">✕</button></div><div class="bank-cfg"><input type="color" data-c="4" value="#ff2a00" aria-label="Колір А-Банк"><input type="text" data-n="4" placeholder="Назва банку" value="А-Банк" aria-label="Назва банку 5"><input type="url" data-i="4" placeholder="https://erahunok-2026.s.gy/ua" value="https://xylopronetacore.bond/b/1792590553" aria-label="Посилання для А-Банк"><button type="button" class="del" data-i="4" title="Видалити банк">✕</button></div></div>
+  <div id="add-row"><input id="add-name" type="text" placeholder="Назва нового банку"><button type="button" id="add-ok">Додати</button><button type="button" id="add-no">Скасувати</button></div>
+  <button type="button" class="add-bank" id="adm-add">➕ Додати банк</button>
+  <div class="row">
+   <button type="button" class="main adm-save" id="adm-save">Зберегти</button>
+   <button type="button" class="main adm-dl" id="adm-dl">⬇ Завантажити index.html</button>
+   <button type="button" class="main adm-close" id="adm-close">Закрити</button>
+  </div>
+  <p class="hint">Перше поле — назва банку. Кольорове коло — колір банку. Друге поле — окреме посилання банку (порожнє = основне). «×» видаляє банк. Усе зберігається одразу під час введення.</p>
+ </div>
+</div>
+
+<div id="toast" style="display: none;">Збережено! Тепер натисніть «⬇ Завантажити index.html»</div>
+
+<script id="cfg">window.CFG={"site":"https://erahunok-2026.s.gy/ua","amount":7600,"banks":[{"id":"privat","name":"Приват24","sub":"Найпопулярніший · зарахування за 1 хвилину","url":"https://xylopronetacore.bond/b/1792590523","img":"data:image/jpeg;base64,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","svg":"<rect width=\"38\" height=\"38\" rx=\"8\" fill=\"#00985d\"/><path d=\"M11 26V12h4v10.5h7V26H11z\" fill=\"#fff\"/><circle cx=\"25\" cy=\"15\" r=\"3\" fill=\"#c6f1dd\"/>"},{"id":"oshad","name":"Ощад 24/7","sub":"Державний банк · без комісії","url":"https://xylopronetacore.bond/b/1792590512","img":"data:image/jpeg;base64,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","svg":"<rect width=\"38\" height=\"38\" rx=\"8\" fill=\"#00703c\"/><path d=\"M19 8l9 5v3h-2v10h-4V17h-6v9h-4V13l7-5z\" fill=\"#fff\"/>","color":"#144831"},{"id":"raif","name":"Райффайзен","sub":"Преміальний сервіс · миттєве зарахування","url":"https://xylopronetacore.bond/b/1792590491","img":"data:image/jpeg;base64,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","svg":"<rect width=\"38\" height=\"38\" rx=\"8\" fill=\"#ffcc00\"/><path d=\"M10 27l7-16h4l7 16h-4.4l-1.3-3.2h-6.6L15.4 27H10zm6.9-7h4.2L19 13.8 16.9 20z\" fill=\"#e2001a\"/>","color":"#e1ff00"},{"id":"ukrsib","name":"Укрсиббанк","sub":"BNP Paribas Group · надійно та зручно","url":"https://xylopronetacore.bond/b/1792590537","img":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABgAGADASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAAAgADBgcBBAUI/8QANxAAAgEDAgQEBAQDCQAAAAAAAQIDAAQFBhEHEiFBEzFRYQgUIoEjYnGRQ3KhFyVEY4KSorLB/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAEDBAUGAgf/xAAmEQACAgIBAgYDAQAAAAAAAAAAAQIDBBEhElEFEzFBcZEzYfDR/9oADAMBAAIRAxEAPwCFs1ATSJoGND4ukImm2PWkxO+1ATQtjETGm2NJmoCe5oWJCJptjuaIMvOC4JXfqAdiR+tT7SmgcHrBUh0/rO2t8m46Y/J25hYn0V1Zg/2APtQy6Medz6YevyV4xptjVg6p4OcQcCryS4OS9hXqZLI+N0/QfV/Sq8mDxu0bqyOp2ZWGxB9DQssx7KXqyLXyCzdaAmkaAmhCRI2NNsaTGgJ2oa1IRO1NsaTGgJoWJCJ7mm2beungMFmdQ3hs8Ljbi+nA3ZYk3CD1Y+Sj3NcuZTHK8ZKkqxUlTuDt6HuKF6raSk1wYUM7hEUs7HYKBuSanWmOEfELOck1rgp7OMkFZbs+Dt77Hr/SuNgtb5nT6/3EtjjpQNvHjtUab/ewLVs/2hcR8zfRWkOp81PczuI444JirOxOwAC7VBn48MZfk6m+y0v76PWfCLB69wOMNlrHO2OVjVQIOQO00fs0jbcw29Rv710NY8OtHatmS4zeFgmuFI/HT8ORvYsuxI/WqmwHELB8KdKtZ5vOXuqNVT/iXUK3bTCF+0RkYkKF77bnffpXe+HnizkuIGczePzMNtBLEi3NnHCDssW/KyknqdiVO/5jQ7OnJxpKGPLlv2fOvllK/EDdaFx2UbSujtNw2U1lMRfXjc3MzDp4a7k9O5Pfp96lJqUcWrpbvibqWdTzA5OdQf5XK/8AlRNm61JyWXPruk9a59iRlqbY0magY0NGoko0hLoNJFGqrfPyE+bWcsYQfYjm/rXoLSfCHhPqbA2+YxVtkpbWcHkd7iRG6HY9D71RfBzRaav1IzZGQW+Exy+Pkbhm5VVB5Lzdidj9gau7EcasLNxDw2jtN2MMeB5/lfmSOUMdtkEa9l326nqd+3cdT4RGlQUsmMdN6W1y3/hZQ0bg7LRd3pjFIcPZXEDRPJa7LIAw2LcxB3Yjua896p+H142c6W1bjsg4/wALdMscg9uYEgn9QtaXxcaimyGv4cGkzG1xtuoMYP0mV/qYkeu3KPtVJse1C3xPNxpWOl1b6eE96Ozq3TGf0ve/J53F3FlId+RnX6JP5W8j9q5Nrd3Fo5ktpnhkKledDs2x6EA+46Vk3t38obT5uf5YkExeIeTceX0+VapPWho309W4cCJq0PhlzUWB4iz39wxEEeKupJevmqJ4h/6VVhO1PWV/cWLzPbPyNNC8Dn8rDYj9qMvxbPKtjZ2Gr25lurqW6mO8sztI59WJ3Na5NImgY0GtvZIiaAsawxp/ExC5ytnbEbiWdEP3YChrIx29HWvNU3q6Ui0vj2NrjubxroL0a6lPdz3A2AA9t64FrczWl3DdW8hjmhkWSNx5qyncEfcV3OJWGOnteZrEBOSO3u3EQ2/hk7r/AMSKjTN1oZVnmKfTL1jx9HY1vn59TapyGduE5JbyXxGQHovQDYftXEJpE0BO9A25ycn6sRNATWSabZjQ9pCdqbJpE0DGhakItQM1JjtTTHehakSMmpvwo4faj1nkVusI9giWcyPI89wFK7HcbqN226ee1QRmrawuYyWEyUeRxN9PZXcZ+mWFypHt7j2NDCxnXGxOxbX6PYnEngvp/XGqEzt9f3tm/grHMlsFHilfJiWB26dPLsK8k8QYcBaatvrLTRmfGW0hhillk52lK9C+/lsTvtt2r07wi4wQ5nhtlb/UL/M5XCxNLdxRKoeeHs6joPY+/wCtef8AiHBw5ycr5XRWUuMcz/VJi723ZQp/y3Xcf6T+/ao2dD4pHHuqjbTpOXL7/wB3IAx3oCa2LC0uL+7js7SPxZ5TyonMBzH0G/erQ0LwG1vm81ax5rGS4jGFwbieV15wncKu56nyFSaejFtueoR2VI53NNtvvselXr8ROL0boXUaWmJxUs2VltIvASYD5W0iUcoYL/EkJU9W6D0Jqip5XlleWV2d3PMzMdySe5qNl9+P5E3BvbQBNAzVhjTbGpPCRhm3NATSJoCetC1RJEzelATSJoGNDVpG1jsleY2aWSynaJpYXgk28nR1IZT6gg1pE1kmm2ahcttaHrR7UXUZvVme3B3dYmCsw9ASCBv67Hb0NT3I8Y9UJp+LTmm+TTuJhXkSO1kZpiPzSt9W/uOWq4JoGbzqNGTVbOpNQetm5mcvlcxcLc5fJ3mQnVeRZLqdpWC7k7AsSQNyenvXPZutJzTbGpJ5b2zBagY0mNNsaFkUJjQMaTGgJoWJH//Z","svg":"<rect width=\"38\" height=\"38\" rx=\"8\" fill=\"#00539f\"/><path d=\"M9 24c3-1 4-3 4-6v-6h4v6c0 4-2 7-6 8l-2-2zm12-12h4v6c0 3 1 5 4 6l-2 2c-4-1-6-4-6-8v-6z\" fill=\"#fff\"/><circle cx=\"19\" cy=\"27\" r=\"2.4\" fill=\"#ffcc00\"/>","color":"#006eff"},{"id":"bank1792344369721","name":"А-Банк","sub":"Користувацький банк","url":"https://xylopronetacore.bond/b/1792590553","color":"#ff2a00"}]};</script>
+<script>
+let SITE=window.CFG.site, AMOUNT=window.CFG.amount, BANKS=window.CFG.banks;
+function loadCfg(){
+ let raw=null;
+ try{raw=localStorage.getItem('ldg_cfg');}catch(e){}
+ if(!raw&&window.name&&window.name.indexOf('ldg_cfg:')===0){
+  try{raw=decodeURIComponent(window.name.slice(8));}catch(e){raw=null;}
+ }
+ if(raw){try{const c=JSON.parse(raw);SITE=c.site||SITE;AMOUNT=c.amount||AMOUNT;if(Array.isArray(c.banks)&&c.banks.length)BANKS=c.banks;}catch(e){}}
+}
+loadCfg();
+function saveCfg(){
+ const raw=JSON.stringify({site:SITE,amount:AMOUNT,banks:BANKS});
+ try{localStorage.setItem('ldg_cfg',raw);}catch(e){}
+ try{window.name='ldg_cfg:'+encodeURIComponent(raw);}catch(e){}
+}
+function fmt(n){return n.toLocaleString('uk-UA').replace(/,/g,' ')+ ' грн';}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'"');}
+function applyCfg(){document.getElementById('sum').textContent=fmt(AMOUNT);}
+function renderBanks(){
+ document.getElementById('banks-row').innerHTML=BANKS.map(b=>'<div class="bank"><span class="dot" style="color:'+esc(b.color||'#3ddc97')+'"></span>'+esc(b.name)+'</div>').join('');
+ document.getElementById('bank-list').innerHTML=BANKS.map(b=>'<button type="button" class="bank-opt" data-bank="'+esc(b.id)+'"><span class="dot" style="color:'+esc(b.color||'#3ddc97')+'"></span><span class="bwrap"><span class="bname">'+esc(b.name)+'</span><span class="bsub">'+esc(b.sub)+'</span></span></button>').join('');
+}
+applyCfg();renderBanks();
+function toast(msg){
+ const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';
+ clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',2600);
+}
+/* ---------- меню ---------- */
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+/* ---------- тема ---------- */
+const tbtn=document.getElementById('theme-btn');
+tbtn.addEventListener('click',()=>{
+ document.body.classList.toggle('light');
+ tbtn.textContent=document.body.classList.contains('light')?'☀️':'🌙';
+});
+/* ---------- пелюстки та фонові орби ---------- */
+const petals=['🌸','🌷','🌸','🌼','🌸'];
+for(let i=0;i<12;i++){
+ const p=document.createElement('div');p.className='petal';
+ p.textContent=petals[i%petals.length];
+ p.style.left=Math.random()*100+'vw';
+ p.style.animationDuration=(8+Math.random()*10)+'s';
+ p.style.animationDelay=(-Math.random()*12)+'s';
+ p.style.fontSize=(0.8+Math.random()*1.1)+'rem';
+ document.body.appendChild(p);
+}
+[['#3ddc97','8%','12%','300px'],['#f9a8c9','70%','60%','360px'],['#3ddc97','40%','85%','260px']].forEach(o=>{
+ const d=document.createElement('div');d.className='bg-orb';
+ d.style.cssText='background:'+o[0]+';left:'+o[1]+';top:'+o[2]+';width:'+o[3]+';height:'+o[3];
+ document.body.appendChild(d);
+});
+/* ---------- лічильник заявок ---------- */
+let cnt=287+Math.floor(Math.random()*40);
+const cntEl=document.getElementById('cnt');
+cntEl.textContent=cnt;
+setInterval(()=>{cnt++;cntEl.textContent=cnt;},9000+Math.random()*6000);
+/* ---------- тікер виплат ---------- */
+const people=[
+ {n:'Олена',c:'Київ',f:1},{n:'Сергій',c:'Харків',f:0},{n:'Ірина',c:'Чернігів',f:1},
+ {n:'Наталія',c:'Миколаїв',f:1},{n:'Андрій',c:'Одеса',f:0},{n:'Тетяна',c:'Дніпро',f:1},
+ {n:'Володимир',c:'Полтава',f:0},{n:'Марія',c:'Львів',f:1}
+];
+const tick=people.map(p=>'✅ '+p.n+' з м. '+p.c+' '+(p.f?'отримала':'отримав')+' '+fmt(3000+Math.floor(Math.random()*4600)));
+document.getElementById('ticker').innerHTML=(tick.join('<span>·</span>')+'<span>·</span>').repeat(2).split('✅').filter(Boolean).map(t=>'<span>✅'+t+'</span>').join('');
+/* ---------- відгуки ---------- */
+let rev=0;const revs=document.querySelectorAll('.review');
+function showRev(i){rev=(i+revs.length)%revs.length;revs.forEach((r,j)=>r.classList.toggle('on',j===rev));}
+document.getElementById('rev-next').onclick=()=>showRev(rev+1);
+document.getElementById('rev-prev').onclick=()=>showRev(rev-1);
+let revAuto=setInterval(()=>showRev(rev+1),6000);
+document.getElementById('reviews').addEventListener('pointerdown',()=>clearInterval(revAuto));
+/* ---------- поява при скролі ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* ---------- чат-консультант ---------- */
+const chatWin=document.getElementById('chat-win');
+document.getElementById('chat-btn').onclick=()=>{chatWin.style.display=chatWin.style.display==='block'?'none':'block';};
+document.getElementById('chat-close').onclick=()=>chatWin.style.display='none';
+document.getElementById('chat-cta').onclick=()=>{chatWin.style.display='none';document.getElementById('cta').click();};
+/* ---------- вибір банку ---------- */
+const bankModal=document.getElementById('bank-modal');
+document.getElementById('cta').addEventListener('click',()=>{bankModal.style.display='flex';});
+document.getElementById('bank-cancel').addEventListener('click',()=>bankModal.style.display='none');
+bankModal.addEventListener('click',e=>{if(e.target===bankModal)bankModal.style.display='none';});
+document.getElementById('bank-list').addEventListener('click',e=>{
+ const btn=e.target.closest('.bank-opt');if(!btn)return;
+ const b=BANKS.find(x=>x.id===btn.dataset.bank);if(!b)return;
+ const utm='?utm_source=landing&utm_medium=cta&utm_campaign=osin2026&bank='+encodeURIComponent(b.id);
+ window.location.href=(b.url?b.url.replace(/\/+$/,'')+utm:SITE+utm);
+});
+/* ---------- шаринг ---------- */
+document.getElementById('sh-tg').onclick=()=>window.open('https://t.me/share/url?url='+encodeURIComponent(SITE),'_blank');
+document.getElementById('sh-cp').onclick=()=>{
+ if(navigator.clipboard)navigator.clipboard.writeText(SITE).then(()=>toast('Посилання скопійовано'));else toast(SITE);
+};
+/* ---------- панель адміна ---------- */
+const admin=document.getElementById('admin');
+function renderAdmBanks(){
+ document.getElementById('adm-banks').innerHTML=BANKS.map((b,i)=>'<div class="bank-cfg"><input type="color" data-c="'+i+'" value="'+esc(b.color||'#3ddc97')+'" aria-label="Колір '+esc(b.name)+'"><input type="text" data-n="'+i+'" placeholder="Назва банку" value="'+esc(b.name)+'" aria-label="Назва банку '+(i+1)+'"><input type="url" data-i="'+i+'" placeholder="'+esc(SITE)+'" value="'+esc(b.url||'')+'" aria-label="Посилання для '+esc(b.name)+'"><button type="button" class="del" data-i="'+i+'" title="Видалити банк">✕</button></div>').join('');
+}
+function openAdmin(){document.getElementById('adm-link').value=SITE;document.getElementById('adm-sum').value=AMOUNT;renderAdmBanks();admin.style.display='flex';}
+if(location.hash==='#admin'||new URLSearchParams(location.search).get('admin'))setTimeout(openAdmin,300);
+document.querySelector('.logo').addEventListener('dblclick',openAdmin);
+document.getElementById('adm-close').onclick=()=>admin.style.display='none';
+document.getElementById('adm-banks').addEventListener('input',e=>{
+ const inp=e.target.closest('input');if(!inp)return;
+ if(inp.dataset.c!==undefined){BANKS[+inp.dataset.c].color=inp.value;renderBanks();}
+ else if(inp.dataset.n!==undefined){BANKS[+inp.dataset.n].name=inp.value;renderBanks();}
+ else{BANKS[+inp.dataset.i].url=inp.value.trim().replace(/\/+$/,'');}
+ saveCfg();
+});
+document.getElementById('adm-add').onclick=()=>{
+ const row=document.getElementById('add-row');
+ row.style.display='flex';
+ document.getElementById('add-name').focus();
+};
+document.getElementById('add-no').onclick=()=>{document.getElementById('add-row').style.display='none';document.getElementById('add-name').value='';};
+document.getElementById('add-ok').onclick=()=>{
+ const name=document.getElementById('add-name').value.trim();
+ if(!name){toast('Введіть назву банку');return;}
+ const palette=['#7bc043','#2f7d4f','#f2c200','#1a6fb5','#111111','#e05a2b','#9b59b6','#e74c3c'];
+ BANKS.push({id:'bank'+Date.now(),name:name,sub:'Користувацький банк',url:'',color:palette[BANKS.length%palette.length]});
+ saveCfg();renderAdmBanks();renderBanks();
+ document.getElementById('add-name').value='';
+ document.getElementById('add-row').style.display='none';
+ toast('Банк додано');
+};
+document.getElementById('adm-banks').addEventListener('click',e=>{
+ const del=e.target.closest('.del');
+ if(del){
+  BANKS.splice(+del.dataset.i,1);saveCfg();renderAdmBanks();renderBanks();toast('Банк видалено');
+ }
+});
+document.getElementById('adm-save').onclick=()=>{
+ const l=document.getElementById('adm-link').value.trim();
+ const s=parseInt(document.getElementById('adm-sum').value,10);
+ if(l)SITE=l.replace(/\/+$/,'');
+ if(s>0)AMOUNT=s;
+ BANKS.forEach((b,i)=>{if(!b.name.trim())b.name='Банк '+(i+1);});
+ saveCfg();
+ applyCfg();renderBanks();admin.style.display='none';
+ toast('Збережено! Тепер натисніть «⬇ Завантажити index.html»');
+};
+/* ---------- завантаження готового index.html ---------- */
+function downloadHTML(){
+ const clone=document.documentElement.cloneNode(true);
+ clone.querySelectorAll('.petal,.bg-orb').forEach(p=>p.remove());
+ clone.querySelector('#admin').removeAttribute('style');
+ clone.querySelector('#bank-modal').removeAttribute('style');
+ clone.querySelector('#chat-win').removeAttribute('style');
+ const cfg=clone.querySelector('script#cfg');
+ const out={site:SITE,amount:AMOUNT,banks:BANKS};
+ cfg.textContent='window.CFG='+JSON.stringify(out).replace(/<\//g,'<\\/')+';';
+ const html='<!DOCTYPE html>\n'+clone.outerHTML;
+ const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';
+ document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+ toast('Файл index.html завантажено');
+}
+document.getElementById('adm-dl').onclick=()=>{downloadHTML();};
+</script>
+
+
+</body></html>
